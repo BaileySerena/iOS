@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wuG-6x-3ax">
+                                <rect key="frame" x="159" y="776" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="send" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AUm-a3-HOA">
+                                <rect key="frame" x="159" y="650" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpN-Cr-RUR">
+                                <rect key="frame" x="184" y="719" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="displayPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgD-5P-OjE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AUm-a3-HOA" firstAttribute="trailing" secondItem="wuG-6x-3ax" secondAttribute="trailing" id="2HK-dX-vPm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wuG-6x-3ax" secondAttribute="bottom" constant="52" id="9O2-uo-MLM"/>
+                            <constraint firstItem="AUm-a3-HOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Arg-6G-EZn"/>
+                            <constraint firstItem="wuG-6x-3ax" firstAttribute="top" secondItem="AUm-a3-HOA" secondAttribute="bottom" constant="92" id="EQ2-Eg-efM"/>
+                            <constraint firstItem="AUm-a3-HOA" firstAttribute="leading" secondItem="wuG-6x-3ax" secondAttribute="leading" id="L8A-zI-gSU"/>
+                            <constraint firstItem="zpN-Cr-RUR" firstAttribute="centerX" secondItem="AUm-a3-HOA" secondAttribute="centerX" id="frO-GF-NAm"/>
+                            <constraint firstItem="zpN-Cr-RUR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyH-iF-lQY"/>
+                            <constraint firstItem="zpN-Cr-RUR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="351" id="mOA-Mh-kos"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTextField" destination="wuG-6x-3ax" id="I6o-ns-au4"/>
+                        <outlet property="passwordTextField" destination="AUm-a3-HOA" id="bTa-CD-yBU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="120"/>
+        </scene>
+    </scenes>
+</document>
