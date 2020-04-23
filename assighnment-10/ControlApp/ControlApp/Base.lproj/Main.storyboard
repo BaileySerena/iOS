@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ControlApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilt-kO-Vpf">
+                                <rect key="frame" x="189" y="466" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="touchInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSx-wE-V4t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C0-X8-m2M">
+                                <rect key="frame" x="186" y="320" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c0G-w8-YG7">
+                                <rect key="frame" x="183" y="384" width="49" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="u18-ZO-CQj"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hBg-hc-XxF">
+                                <rect key="frame" x="142" y="533" width="131" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Kwd-nG-CCY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="One"/>
+                                    <segment title="Two"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="GN0-fO-PH5"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7C0-X8-m2M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dF-RO-mXt"/>
+                            <constraint firstItem="7C0-X8-m2M" firstAttribute="centerX" secondItem="c0G-w8-YG7" secondAttribute="centerX" id="9RS-b2-ZYZ"/>
+                            <constraint firstItem="c0G-w8-YG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="CUp-gL-5aJ"/>
+                            <constraint firstItem="hBg-hc-XxF" firstAttribute="centerX" secondItem="ilt-kO-Vpf" secondAttribute="centerX" id="LMA-KE-qKZ"/>
+                            <constraint firstItem="hBg-hc-XxF" firstAttribute="top" secondItem="ilt-kO-Vpf" secondAttribute="bottom" constant="37" id="TTN-OI-gJk"/>
+                            <constraint firstItem="ilt-kO-Vpf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="189" id="WhQ-VI-V54"/>
+                            <constraint firstItem="7C0-X8-m2M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="276" id="eSb-fV-kIa"/>
+                            <constraint firstItem="hBg-hc-XxF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="eiX-oj-X8m"/>
+                            <constraint firstItem="c0G-w8-YG7" firstAttribute="top" secondItem="7C0-X8-m2M" secondAttribute="bottom" constant="43" id="gsy-ZN-m6L"/>
+                            <constraint firstItem="ilt-kO-Vpf" firstAttribute="top" secondItem="c0G-w8-YG7" secondAttribute="bottom" constant="51" id="iea-bf-t1s"/>
+                            <constraint firstItem="c0G-w8-YG7" firstAttribute="centerX" secondItem="ilt-kO-Vpf" secondAttribute="centerX" id="wea-5n-y1J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonObject" destination="ilt-kO-Vpf" id="tpI-Ae-UxM"/>
+                        <outlet property="labelSwitch" destination="7C0-X8-m2M" id="R1e-eq-AVv"/>
+                        <outlet property="segmentedControl" destination="hBg-hc-XxF" id="Ejb-Eg-ASy"/>
+                        <outlet property="switchObject" destination="c0G-w8-YG7" id="0dO-b7-pJm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="119"/>
+        </scene>
+    </scenes>
+</document>
